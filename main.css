@@ -1,0 +1,56 @@
+* {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.panel.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.eyebrow {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.use-lining {
+  font-variant-numeric: lining-nums;
+}
+
+.controls {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.controls a {
+  color: #f5f5f5;
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .panel {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .panel:target {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .panel.is-active {
+    opacity: 0;
+  }
+}
